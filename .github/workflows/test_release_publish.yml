@@ -47,6 +47,7 @@ jobs:
 
     - name: Publish to PyPI
       run: |
+        poetry config repositories.testpypi https://test.pypi.org/legacy/
         make release
       env:
         PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}

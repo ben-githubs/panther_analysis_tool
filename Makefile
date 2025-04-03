@@ -86,7 +86,7 @@ build: ## Builds the package
 
 .PHONY: publish
 release:
-	poetry publish -u __token__ -p ${PYPI_TOKEN}
+	poetry publish -u __token__ -p ${PYPI_TOKEN} -r testpypi
 
 .PHONY: pypi
 pypi: reqs build publish ## Publish to PyPi
